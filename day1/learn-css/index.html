@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Explanation and Demo</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <div class="raja">
+    <div class="box-1">
+      Box 1
+    </div>
+    <div class="box-2">
+      Box 2
+    </div>
+    <div class="box-3">
+      Box 3
+    </div>
+  </div>
+
+
+  <hr>
+  <hr>
+
+  <p style="font-size: 30px; font-weight: 900;">This is a paragraph of text.</p>
+
+  <section class="basic-selectors">
+    <h2 class="h2-heading">1. Basic Selectors</h2>
+    <h2 class="h2-heading">1. Basic Selectors</h2>
+    <p>This is styled with an element selector (p).</p>
+    <p class="class-example">This is styled with a class selector (.class-example).</p>
+    <p id="id-example">This is styled with an ID selector (#id-example).</p>
+  </section>
+
+  <section class="colors">
+    <h2>2. Colors</h2>
+    <p class="named-color">This uses a named color (green).</p>
+    <p class="hex-color">This uses a hex color (#ff5733).</p>
+    <p class="rgba-color">This uses an RGBA color with transparency.</p>
+  </section>
+
+  <section class="box-model">
+    <h2>3. Box Model</h2>
+    <div class="box-example">This box demonstrates padding, border, and margin.</div>
+  </section>
+
+  <section class="flexbox">
+    <h2>4. Flexbox</h2>
+    <div class="flex-container">
+      <div class="flex-item">Item 1</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3</div>
+    </div>
+  </section>
+
+  <section class="positioning">
+    <h2>5. Positioning</h2>
+    <div class="position-example">
+      Relative Parent
+      <div class="absolute-child">Absolute Child</div>
+    </div>
+  </section>
+
+  <section class="display-types">
+    <h2>6. Display Types</h2>
+    <span class="inline-example">Inline</span>
+    <div class="block-example">Block</div>
+    <span class="inline-block-example">Inline-Block</span>
+    <span class="inline-block-example">Inline-Block</span>
+  </section>
+
+  <section class="transforms-transitions">
+    <h2>7. Transforms and Transitions</h2>
+    <div class="transform-example">Hover Me</div>
+  </section>
+
+  <section class="animations">
+    <h2>8. Animations</h2>
+    <div class="animation-example"></div>
+  </section>
+
+  <section class="filters">
+    <h2>9. Filters</h2>
+    <div class="filter-example"></div>
+  </section>
+
+  <section class="background-properties">
+    <h2>10. Background Properties</h2>
+    <div class="background-example"></div>
+  </section>
+
+  <!-- Section: Images -->
+  <section class="images">
+    <h2>1. Image Properties</h2>
+    <p>CSS provides several ways to style images:</p>
+    <ul>
+      <li><strong>max-width:</strong> Ensures the image doesn't exceed its container's width.</li>
+      <li><strong>height:</strong> Auto-adjusts to maintain the aspect ratio.</li>
+      <li><strong>border:</strong> Adds a border around the image.</li>
+      <li><strong>border-radius:</strong> Rounds the corners or creates circular shapes.</li>
+      <li><strong>box-shadow:</strong> Adds shadow effects.</li>
+    </ul>
+    <img src="https://via.placeholder.com/600x400" alt="Example Image" class="image-example">
+    <p>Circular Image:</p>
+    <img src="https://via.placeholder.com/150" alt="Circular Image" class="image-circle">
+  </section>
+
+  <!-- Section: Gradients -->
+  <section class="gradients">
+    <h2>2. CSS Gradients</h2>
+    <p>Gradients are smooth transitions between two or more colors:</p>
+    <ul>
+      <li><strong>Linear Gradient:</strong> Transitions colors along a straight line.</li>
+      <li><strong>Radial Gradient:</strong> Transitions colors outward in a circular or elliptical shape.</li>
+    </ul>
+    <div class="gradient-box"></div>
+    <div class="radial-gradient-box"></div>
+  </section>
+
+  <!-- Section: Relative Parent with Absolute Child -->
+  <section class="relative-absolute">
+    <h2>3. Relative Parent with Absolute Child</h2>
+    <p>When a parent has <code>position: relative</code>, its <code>position: absolute</code> child is constrained to
+      move
+      within the boundaries of the parent.</p>
+    <div class="relative-parent1">
+      Relative Parent
+      <div class="absolute-child1">Child</div>
+    </div>
+  </section>
+
+
+  <section class="pseudo-classes">
+    <h2>4. Pseudo-classes</h2>
+    <p>Pseudo-classes are used to define the special state of an element. Examples:</p>
+    <ul>
+      <li>First item (selected using <code>:first-child</code>).</li>
+      <li>Second item.</li>
+      <li>Third item.</li>
+      <li>Last item (selected using <code>:last-child</code>).</li>
+    </ul>
+  </section>
+
+  <!-- Section: Pseudo-elements -->
+  <section class="pseudo-elements">
+    <h2>5. Pseudo-elements</h2>
+    <p>Pseudo-elements style specific parts of an element, such as adding content before or after the element.</p>
+    <p>This paragraph has a pseudo-element <code>::before</code> and <code>::after</code>.</p>
+  </section>
+
+  <!-- Section: nth-child -->
+  <section class="nth-child-demo">
+    <h2>6. nth-child Selector</h2>
+    <p>The <code>:nth-child()</code> selector allows targeting elements based on their position in a parent.</p>
+    <ul>
+      <li>Item 1 (odd)</li>
+      <li>Item 2 (even)</li>
+      <li>Item 3 (specific nth-child example)</li>
+      <li>Item 4 (even)</li>
+      <li>Item 5 (odd)</li>
+    </ul>
+  </section>
+
+</body>
+
+</html>

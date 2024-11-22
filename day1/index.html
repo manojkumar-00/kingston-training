@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Example</title>
+</head>
+
+<body>
+
+    <!-- 
+    Basic Structure Tags:
+    <!DOCTYPE> defines the document type.
+    <html> is the root element.
+    <head> contains metadata.
+    <body> contains content displayed on the webpage.
+    -->
+
+    <!-- Heading Tags -->
+    <!-- Used for creating headings of different importance -->
+    <h1>Main Heading</h1>
+    <h2>Subheading 1</h2>
+    <h3>Subheading 2</h3>
+    <h4>Subheading 3</h4>
+    <h5>Subheading 4</h5>
+    <h6>Subheading 5</h6>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- Paragraph Tag -->
+    <!-- Used to create paragraphs -->
+    <p>This is a paragraph of text.</p>
+
+    <!-- Anchor Tag -->
+    <!-- Used to create hyperlinks -->
+    <a href="https://www.ibm.com" target="_blank">Visit <span>Example</span></a>
+
+    <!-- Image Tag -->
+    <!-- Used to display images -->
+    <img src="example.jpg" alt="Example Image" width="300" height="200">
+
+    <!-- List Tags -->
+    <!-- Ordered List -->
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+
+    <!-- Unordered List -->
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- Table Tag -->
+    <!-- Used to create tables -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <!-- <td>Data 3</td> -->
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td colspan="4" rowspan="2">Data 2</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 1</td>
+                <td>Data 1</td>
+                <td>Data 1</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- Form Tags -->
+    <!-- Used to create forms for user input -->
+    <form action="submit.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <br />
+
+        <!-- <label for="email">Email:</label> -->
+        Email:
+        <input type="text" id="email" name="email" placeholder="Enter your email" required>
+        <br />
+
+        <label for="phone">Phone:</label>
+        <input type="number" id="phone" name="phone" placeholder="Enter your phone" required>
+        <br />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br />
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- Input Tag -->
+    <!-- Used to accept input of various types -->
+    <!-- Checkbox: Allows the user to select multiple options -->
+    <input type="checkbox" id="check1" name="check1">
+    <label for="check1">Checkbox</label>
+    <br />
+
+    <input type="checkbox" id="check2" name="check2" checked>
+    <label for="check2">Another Checkbox</label>
+    <br />
+
+    <!-- Radio Button: Allows the user to select one option from a group -->
+    <input type="radio" id="radio1" name="group1" value="option1" checked>
+    <label for="radio1">Option 1</label>
+    <br />
+
+    <input type="radio" id="radio2" name="group1" value="option2">
+    <label for="radio2">Option 2</label>
+    <br />
+
+    <!-- Text Input: Allows the user to enter text -->
+    <label for="textInput">Text Input: </label>
+    <textarea id="textInput" name="textInput" rows="4" cols="50">
+    </textarea>
+
+    <br />
+    <hr />
+    <br />
+    <!-- Semantic HTML Tags -->
+    <!-- Defines content structure -->
+    <header>
+        <h1>Website Header</h1>
+    </header>
+
+    <section>
+        <h2>Section Title</h2>
+        <p>Content inside a section.</p>
+    </section>
+
+    <footer>
+        <p>Footer Content</p>
+    </footer>
+
+    <!-- Media Tags -->
+    <!-- Used to embed videos or audio -->
+    <!-- autoplay, loop, muted -->
+    <video width="320" height="240" controls muted>
+        <source src="movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- autoplay, loop, muted -->
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Blockquote Tag -->
+    <!-- Used to indicate quotations -->
+    <blockquote>
+        "This is a blockquote example."
+    </blockquote>
+
+    <!-- Preformatted Tag -->
+    <!-- Preserves whitespace and formatting -->
+    <p>
+        this is a p tag is example <br />
+        This is new line
+    </p>
+    <pre>
+        Line 1
+                Line 2
+        Line 3
+    </pre>
+
+    <!-- Inline Styling Tags -->
+    <!-- Used for highlighting or emphasizing text -->
+    <b>Bold Text</b>
+    <i>Italic Text</i>
+    <u>Underlined Text</u>
+
+    <!-- Advanced Tags -->
+    <!-- Canvas Tag -->
+    <!-- Used for graphics -->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+
+    <!-- Script Tag -->
+    <!-- Used to add JavaScript -->
+    <script>
+        console.log("This is a script example.");
+    </script>
+
+</body>
+
+</html>

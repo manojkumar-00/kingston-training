@@ -1,0 +1,339 @@
+/* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    /* background-color: yellow; */
+}
+
+.raja {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* gap: 30px; */
+    /* gap: 30px; */
+    /* background-color: pink; */
+    width: 300px;
+    height: 100px;
+}
+
+.box-1 {
+    background-color: red;
+}
+
+.box-2 {
+    background-color: green;
+}
+
+.box-3 {
+    background-color: blue;
+}
+
+
+.basic-selectors {
+    background-color: rgb(185, 185, 211);
+    color: white;
+    /* padding: 30px; */
+    /* margin-top: 30px; */
+}
+
+.h2-heading {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+    /* margin-top: 30px; */
+    text-align: left;
+    text-decoration: line-through;
+
+    line-height: 1.5;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    /* text-align: justify; */
+    text-indent: 50px;
+    /* font-weight: 1000; */
+    /*font-weight:500*/
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 1. Basic Selectors */
+p {
+    color: blue;
+}
+
+.class-example {
+    background-color: yellow;
+}
+
+#id-example {
+    font-size: 20px;
+}
+
+/* 2. Colors */
+.named-color {
+    color: green;
+    color: #EAEEEF;
+}
+
+.hex-color {
+    color: #ff5733;
+}
+
+.rgba-color {
+    color: rgba(255, 87, 51, 0.5);
+}
+
+/* 3. Box Model */
+.box-example {
+    background-color: lightblue;
+    padding: 20px;
+    border: 5px solid blue;
+    margin: 20px;
+    width: 300px;
+}
+
+/* 4. Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.flex-item {
+    background-color: coral;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
+
+/* 5. Positioning */
+.position-example {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+}
+
+.absolute-child {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+/* 6. Display Types */
+.inline-example {
+    display: inline;
+    background-color: pink;
+    padding: 5px;
+}
+
+.block-example {
+    display: block;
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.inline-block-example {
+    display: inline-block;
+    background-color: lightcoral;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* 7. Transforms and Transitions */
+.transform-example {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.transform-example:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+/* 8. Animations */
+@keyframes example-animation {
+    0% {
+        background-color: red;
+        transform: translateX(0);
+    }
+
+    50% {
+        background-color: yellow;
+        transform: translateX(100px);
+    }
+
+    100% {
+        background-color: green;
+        transform: translateX(0);
+    }
+}
+
+.animation-example {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: example-animation 3s infinite;
+}
+
+/* 9. Filters */
+.filter-example {
+    width: 300px;
+    height: 200px;
+    background-image: url('https://www.euractiv.com/wp-content/uploads/sites/2/2023/06/shutterstock_2068727069-scaled.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(5px);
+    /* filter: invert(100%); */
+    transition: filter 0.3s ease;
+}
+
+.filter-example:hover {
+    filter: none;
+}
+
+/* 10. Background Properties */
+.background-example {
+    width: 300px;
+    height: 200px;
+    background-image: url('https://www.euractiv.com/wp-content/uploads/sites/2/2023/06/shutterstock_2068727069-scaled.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 11. Image Properties */
+.image-example {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 12. Gradients */
+.gradient-box {
+    width: 300px;
+    height: 150px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    margin-bottom: 20px;
+}
+
+.radial-gradient-box {
+    width: 300px;
+    height: 150px;
+    background: radial-gradient(circle, pink, purple, blue);
+}
+
+/* 13. Relative Parent with Absolute Child */
+.relative-parent1 {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 20px 0;
+    border: 2px dashed blue;
+    overflow: hidden;
+}
+
+.absolute-child1 {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pseudo-classes */
+.pseudo-classes ul li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.pseudo-classes ul li:hover {
+    background-color: lightblue;
+}
+
+.pseudo-classes ul li:first-child {
+    font-weight: bold;
+    color: red;
+}
+
+.pseudo-classes ul li:last-child {
+    font-style: italic;
+    color: green;
+}
+
+/* Pseudo-elements */
+.pseudo-elements p {
+    position: relative;
+    padding-left: 20px;
+}
+
+.pseudo-elements p::before {
+    content: '👉';
+    position: absolute;
+    left: 0;
+}
+
+.pseudo-elements p::after {
+    content: '✔️';
+    color: green;
+    margin-left: 10px;
+}
+
+/* nth-child */
+.nth-child-demo ul li {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.nth-child-demo ul li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.nth-child-demo ul li:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+.nth-child-demo ul li:nth-child(3) {
+    font-weight: bold;
+    color: darkblue;
+}
