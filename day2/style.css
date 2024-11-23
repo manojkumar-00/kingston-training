@@ -1,0 +1,183 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Wrap items if they exceed the container width */
+    justify-content: space-between;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    gap: 15px;
+    /* Space between items */
+    width: 80%;
+    /* max-width: 600px; */
+    background-color: #e62b2b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0px auto 20px auto;
+    /* flex-shrink: 0; */
+}
+
+.box {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #6200ea;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 8px 1px rgba(0, 0, 255, .2);
+    /* box-shadow: 60px -16px teal; */
+}
+
+
+
+h2 {
+    color: #333;
+    /* margin-top: 30px; */
+    text-align: center;
+    /* text-decoration: double underline; */
+    line-height: 1.8;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    /* text-align: justify; */
+    text-indent: 50px;
+    /* font-weight: 1000; */
+    /*font-weight:500*/
+    font-style: italic;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+
+
+/* 5. Positioning */
+.position-example {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    margin: 20px auto;
+    /* overflow: hidden; */
+    /* overflow-y: hidden; */
+    overflow-y: hidden;
+    /*overflow:hidden*/
+}
+
+.absolute-child {
+    position: absolute;
+    top: 100%;
+    right: -10px;
+    /* bottom: 0;
+    left: 0; */
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+
+.relative-absolute {
+    margin-bottom: 30px;
+}
+
+.relative-absolute p {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.relative-parent1 {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 20px 0;
+    border: 2px dashed blue;
+    overflow: hidden;
+    margin: auto;
+}
+
+.absolute-child1 {
+    position: absolute;
+    top: 20px;
+    right: -5%;
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 30px; */
+}
+
+/* Display Types */
+
+.display-types {
+    background-color: lavender;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.inline-example {
+    display: inline;
+    background-color: pink;
+    padding: 5px;
+}
+
+.block-example {
+    display: block;
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.inline-block-example {
+    display: inline-block;
+    background-color: lightcoral;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Image Properties */
+.images {
+    background-color: pink;
+    width: 40%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.image-example {
+    /* margin: 20px auto; */
+    /* max-width: 100px; */
+    height: auto;
+    width: 500px;
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* object-fit: contain; */
+}
+
+
+
+.image-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}

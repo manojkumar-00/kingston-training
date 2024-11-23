@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Explanation and Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <i style="font-size: 50px; background-color: red;" class="ri-notification-3-line"></i>
+    <i class="ri-smartphone-line"></i>
+
+    <h2>Flexbox</h2>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <hr />
+
+
+    <section class="positioning">
+        <h2>5. Positioning</h2>
+        <div class="position-example">
+            Relative Parent
+            <div class="absolute-child">
+                Absolute Child
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Relative Parent with Absolute Child -->
+    <section class="relative-absolute">
+        <h2>Relative Parent with Absolute Child</h2>
+        <p>When a parent has <code>position: relative</code>, its child has <code>position: absolute</code> child is
+            constrained to move within the boundaries of the parent.</p>
+        <div class="relative-parent1">
+            Relative Parent
+            <div class="absolute-child1">Child</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="display-types">
+        <h2>Display Types</h2>
+        <span>Hello</span>
+        <p class="inline-example">Inline</p>
+        <span class="block-example">Block</span>
+        <span class="inline-block-example">Inline-Block</span>
+    </section>
+
+    <hr>
+
+    <!-- Section: Images -->
+    <section class="images">
+        <h2>Image Properties</h2>
+        <p>CSS provides several ways to style images:</p>
+        <ul>
+            <li><strong>max-width:</strong> Ensures the image doesn't exceed its container's width.</li>
+            <li><strong>height:</strong> Auto-adjusts to maintain the aspect ratio.</li>
+            <li><strong>border:</strong> Adds a border around the image.</li>
+            <li><strong>border-radius:</strong> Rounds the corners or creates circular shapes.</li>
+            <li><strong>box-shadow:</strong> Adds shadow effects.</li>
+        </ul>
+        <img id="id1"
+            src="https://bsmedia.business-standard.com/_media/bs/img/article/2016-12/19/full/1482166957-2568.jpg"
+            alt="Example Image" class="image-example">
+        <p>Circular Image:</p>
+        <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2016-12/19/full/1482166957-2568.jpg"
+            alt="Circular Image" class="image-circle">
+    </section>
+
+    <hr>
+</body>
+
+</html>
