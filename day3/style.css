@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box-image {
+    width: 500px;
+    height: 300px;
+    background-image: url("https://www.euractiv.com/wp-content/uploads/sites/2/2023/06/shutterstock_2068727069-scaled.jpg");
+}
+
+/* 9. Filters */
+
+.filters {
+    width: 60%;
+    margin: 20px auto;
+    background-color: lavender;
+}
+
+.filter-example {
+    margin: 20px auto;
+    width: 300px;
+    height: 200px;
+    background-image: url('https://www.euractiv.com/wp-content/uploads/sites/2/2023/06/shutterstock_2068727069-scaled.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* filter: invert(100%); */
+    /* filter: grayscale(70%); */
+    filter: invert();
+    transition: filter 0.3s ease;
+}
+
+.filter-example:hover {
+    filter: none;
+}
+
+/* 10. Background Properties */
+
+.background-example {
+    margin: 20px auto;
+    width: 300px;
+    height: 200px;
+    background-image: url('https://www.euractiv.com/wp-content/uploads/sites/2/2023/06/shutterstock_2068727069-scaled.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10%;
+}
+
+/* 12. Gradients */
+
+.gradients {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.gradient-box {
+    width: 300px;
+    height: 150px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    margin-bottom: 20px;
+}
+
+.radial-gradient-box {
+    width: 300px;
+    height: 150px;
+    background: radial-gradient(circle, pink, purple, blue);
+}
+
+
+/* Pseudo-classes */
+.pseudo-classes ul li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    transition: background-color 0.5s;
+}
+
+.pseudo-classes ul li:hover {
+    background-color: lightblue;
+}
+
+.pseudo-classes ul li:first-child {
+    font-weight: bold;
+    color: red;
+}
+
+.pseudo-classes ul li:last-child {
+    font-style: italic;
+    color: green;
+}
+
+/* Pseudo-elements */
+.pseudo-elements p {
+    position: relative;
+    padding-left: 20px;
+}
+
+.pseudo-elements p::before {
+    content: '👉';
+    position: absolute;
+    left: 0;
+}
+
+.pseudo-elements p::after {
+    content: '✔️';
+    color: green;
+    margin-left: 10px;
+}
+
+/* nth-child */
+.nth-child-demo ul li {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.nth-child-demo ul li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.nth-child-demo ul li:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+.nth-child-demo ul li:nth-child(3) {
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* 7. Transforms and Transitions */
+.transform-example {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.transform-example:hover {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.animations {
+    width: 80%;
+    margin: 20px auto;
+    background-color: lavender;
+}
+
+.animation-example {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: example-animation 5s infinite linear;
+}
+
+/* 8. Animations */
+@keyframes example-animation {
+    0% {
+        background-color: red;
+        transform: translateX(-200%);
+    }
+
+    25% {
+        background-color: blue;
+        transform: translateX(-100%);
+    }
+
+    50% {
+        background-color: yellow;
+        transform: translateX(0%);
+    }
+
+    75% {
+        background-color: green;
+        transform: translateX(100%);
+    }
+
+    100% {
+        background-color: red;
+        transform: translateX(200%);
+    }
+}
