@@ -1,0 +1,228 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Styling */
+section {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Filters */
+.filter-example {
+    width: 300px;
+    height: 200px;
+    background-image: url('https://www.euractiv.com/wp-content/uploads/sites/2/2023/06/shutterstock_2068727069-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: 2px solid #ccc;
+}
+
+.filter-example:hover {
+    filter: none;
+    transform: scale(1.1);
+}
+
+/* Background Properties */
+.background-example {
+    width: 300px;
+    height: 200px;
+    background-image: url('https://www.euractiv.com/wp-content/uploads/sites/2/2023/06/shutterstock_2068727069-scaled.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    border: 2px solid #666;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradients */
+.gradient-box {
+    width: 300px;
+    height: 150px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border: 2px solid #f1a1a1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.radial-gradient-box {
+    width: 300px;
+    height: 150px;
+    background: radial-gradient(circle, #d4fc79, #96e6a1);
+    border-radius: 50%;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Pseudo-classes */
+.pseudo-classes ul li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover, Active, and Focus */
+.pseudo-classes ul li:hover {
+    background-color: #f0f8ff;
+    color: darkblue;
+}
+
+.pseudo-classes ul li:active {
+    background-color: #f73722;
+    transform: scale(0.5);
+}
+
+
+/* First and Last */
+.pseudo-classes ul li:first-child {
+    font-weight: bold;
+    color: red;
+}
+
+.pseudo-classes ul li:last-child {
+    font-style: italic;
+    color: green;
+}
+
+/* nth-child */
+.pseudo-classes ul li:nth-child(2) {
+    background-color: #fdfd96;
+}
+
+.pseudo-classes ul li:nth-child(3n) {
+    color: purple;
+    font-weight: bold;
+}
+
+/* Pseudo-elements */
+.pseudo-elements p::before {
+    content: "🎯 ";
+    color: #ff6347;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.pseudo-elements p::after {
+    content: " ✔";
+    color: green;
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+/* nth-child Demo */
+.nth-child-demo ul li:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.nth-child-demo ul li:nth-child(even) {
+    background-color: #e0f7fa;
+}
+
+/* nth-of-type */
+.nth-child-demo ul li:nth-of-type(3) {
+    color: #3f51b5;
+    text-transform: uppercase;
+}
+
+/* Transforms and Transitions */
+.transform-example {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+    border: 2px solid #999;
+    border-radius: 10px;
+}
+
+.transform-example:hover {
+    transform: rotate(360deg) scale(1.2);
+    background-color: #87ceeb;
+}
+
+/* Animations */
+.animation-example {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: bounce-and-color 5s infinite ease-in-out;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+@keyframes bounce-and-color {
+    0% {
+        transform: translateY(0);
+        background-color: red;
+    }
+
+    25% {
+        transform: translateY(-50px);
+        background-color: orange;
+    }
+
+    50% {
+        transform: translateY(0);
+        background-color: yellow;
+    }
+
+    75% {
+        transform: translateY(-25px);
+        background-color: green;
+    }
+
+    100% {
+        transform: translateY(0);
+        background-color: red;
+    }
+}
+
+/* Tooltip Example */
+.transform-example::after {
+    content: "Hover for Effect!";
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    color: gray;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.transform-example:hover::after {
+    opacity: 1;
+}
