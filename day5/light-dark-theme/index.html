@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Hello, Theming!</h1>
+    <button id="theme-toggle">Toggle Theme</button>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+
+        toggleButton.addEventListener('click', () => {
+            const rootElement = document.documentElement;
+            const currentTheme = rootElement.getAttribute('data-theme');
+            console.log(currentTheme);
+
+            // Switch between 'light' and 'dark'
+            const newTheme = (currentTheme === 'light' || currentTheme === null) ? 'dark' : 'light';
+            rootElement.setAttribute('data-theme', newTheme);
+        });
+
+    </script>
+</body>
+
+</html>
