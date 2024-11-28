@@ -159,8 +159,8 @@ callbackToPromise("Task 2")
  */
 
 const promise1 = new Promise((resolve) => setTimeout(() => resolve("Task 1 done"), 1000));
-const promise2 = new Promise((resolve) => setTimeout(() => resolve("Task 2 done"), 2000));
-const promise3 = new Promise((resolve) => setTimeout(() => resolve("Task 3 done"), 1500));
+const promise2 = new Promise((resolve, reject) => setTimeout(() => reject("Task 2 rejected"), 3000));
+const promise3 = new Promise((resolve) => setTimeout(() => resolve("Task 3 done"), 5000));
 
 Promise.all([promise1, promise2, promise3])
     .then((results) => console.log(results)) // Output: ["Task 1 done", "Task 2 done", "Task 3 done"]
@@ -173,8 +173,8 @@ Promise.all([promise1, promise2, promise3])
  * Resolves or rejects as soon as the first promise in the iterable settles.
  */
 
-const racePromise1 = new Promise((resolve) => setTimeout(() => resolve("Fastest!"), 1000));
-const racePromise2 = new Promise((resolve) => setTimeout(() => resolve("Slower..."), 2000));
+const racePromise1 = new Promise((resolve) => setTimeout(() => resolve("Fastest!"), 3000));
+const racePromise2 = new Promise((resolve, reject) => setTimeout(() => reject("Slower..."), 2000));
 
 Promise.race([racePromise1, racePromise2])
     .then((result) => console.log(result)) // Output: Fastest!
@@ -191,7 +191,7 @@ const anyPromise1 = new Promise((_, reject) => setTimeout(() => reject("Failed 1
 const anyPromise2 = new Promise((resolve) => setTimeout(() => resolve("Success!"), 2000));
 const anyPromise3 = new Promise((_, reject) => setTimeout(() => reject("Failed 3"), 1500));
 
-Promise.any([anyPromise1, anyPromise2, anyPromise3])
+Promise.race([anyPromise1, anyPromise2, anyPromise3])
     .then((result) => console.log(result)) // Output: Success!
     .catch((error) => console.error(error));
 

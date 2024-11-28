@@ -46,15 +46,38 @@ greetWithAwait();
  */
 
 // Example of using await with a promise
+
 async function fetchData() {
-    console.log("Started Fetch Data");
-    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-    console.log("Data fetched");
-    const data = await response.json();
-    console.log(data);
+    try {
+        console.log("Started Fetch Data");
+        const response = fetch("https://jsonplaceholder.typicode.com/todos/1");
+        console.log("res: ", response);
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log('Error : ', error.message);
+    }
 }
 
+
 fetchData();
+
+const url = "https://jsonplaceholder.typicode.com/todos/1";
+const fetchResponse = fetch(url);
+fetchResponse
+    .then(
+        (response) => {
+            const ans = response.json();
+            return ans;
+        },
+        (error) => console.log(error)
+    )
+    .then(
+        (data) => console.log(data)
+    )
+    .catch((error) => console.log(error)
+    );
+
 
 //==============================================================================
 

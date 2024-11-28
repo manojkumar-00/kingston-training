@@ -45,9 +45,16 @@ console.log(rangeIterator.next()); // { value: undefined, done: true }
  */
 
 function* simpleGenerator() {
+    // return 10;
+    console.log("before yield 1");
     yield 1; // Pauses execution and returns 1
+    console.log("before yield 2");
+
     yield 2; // Pauses execution and returns 2
+    console.log("before yield 3");
+
     yield 3; // Pauses execution and returns 3
+
 }
 
 const gen = simpleGenerator();
@@ -55,6 +62,8 @@ console.log(gen.next()); // { value: 1, done: false }
 console.log(gen.next()); // { value: 2, done: false }
 console.log(gen.next()); // { value: 3, done: false }
 console.log(gen.next()); // { value: undefined, done: true }
+console.log(typeof gen);
+
 
 //==============================================================================
 
