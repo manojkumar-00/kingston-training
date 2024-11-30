@@ -35,6 +35,21 @@ closureExample(); // Output: "I'm from outer function"
 
 //==============================================================================
 
+function outerFunction() {
+    console.log("Start of outer function : ");
+    let x = 10;
+    let y = 20;
+    function innerFunction() {
+        console.log("I'm from inner function");
+        let z = x + y;
+        return z;
+    }
+    console.log("End of outer function : ");
+    return innerFunction;
+}
+
+//==============================================================================
+
 /**
  * Closures with Arguments
  * Closures can also work with arguments passed to the outer function.
